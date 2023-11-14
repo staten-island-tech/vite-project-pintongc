@@ -1,10 +1,10 @@
 .dark {
-  --primary: var(--grey);
-  --secondary: var(--black);
+  --primary: var(--light-green);
+  --secondary: var(--dark-green);
 }
 
 .light {
-  background-color: whitesmoke;
+  background-color: red;
 }
 
 :root {
@@ -12,11 +12,35 @@
   --light-blue: #2998ff;
   --dark-blue: #135cc5;
   --grey: #252c30;
+  --light-green: #90EE90;
+  --dark-green: #023020;
   /*intentions*/
   --primary: var(--grey);
   --secondary: var(--black);
 }
 
 body {
-  background-color: var(--primary);
+  margin: 0px;
+  padding: 0px;
+}
+.gallery {
+  position: relative;
+  display: flexbox;
+}
+.card {
+  border: black solid 5px;
+  width: fit-content;
+  height: auto;
+  position: absolute;
+  left: 30%;
+}
+
+.switch {
+  scale: 1.5;
+}
+
+.header {
+  font-size: 50px;
+  text-align: center;
+  border-bottom: black solid 3px;
 }
