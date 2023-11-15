@@ -1,22 +1,29 @@
-.dark {
-  --primary: var(--light-green);
-  --secondary: var(--dark-green);
-}
-
-.light {
-  background-color: red;
-}
-
 :root {
   --black: #000;
   --light-blue: #2998ff;
   --dark-blue: #135cc5;
-  --grey: #252c30;
-  --light-green: #90EE90;
-  --dark-green: #023020;
-  /*intentions*/
-  --primary: var(--grey);
-  --secondary: var(--black);
+  --light-red: #f87171;
+  --dark-red: #dc2626;
+  --gray: #252c30;
+
+  
+  --primary: var(--light-blue);
+  --secondary: var(--dark-blue);
+}
+.dark {
+  --primary: var(--light-red);
+  --secondary: var(--dark-red);
+}
+.light {
+  --primary: var(--light-blue);
+  --secondary: var(--dark-blue);
+}
+.header {
+  background-color: var(--primary);
+}
+.gallery {
+  background-color: var(--secondary);
+  height: 90vh;
 }
 
 body {
@@ -24,23 +31,35 @@ body {
   padding: 0px;
 }
 .gallery {
-  position: relative;
-  display: flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  padding: 0px;
 }
 .card {
-  border: black solid 5px;
-  width: fit-content;
-  height: auto;
-  position: absolute;
-  left: 30%;
+  background-color: whitesmoke;
+  border: 0.3rem solid black;
+  border-radius: 30px;
+  width: 15vw;
+  height: 48vh;
+  padding: 0%;
+  margin: 3rem;
+  align-items: center;
+  transition: all 0.3s
 }
 
 .switch {
   scale: 1.5;
+  position: absolute;
+  left: 48vw;
+  top: 90vh;
 }
 
 .header {
   font-size: 50px;
   text-align: center;
   border-bottom: black solid 3px;
+  margin-bottom: 5px;
 }
