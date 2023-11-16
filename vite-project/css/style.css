@@ -18,6 +18,12 @@
   --primary: var(--light-blue);
   --secondary: var(--dark-blue);
 }
+
+.warm {
+  --primary: var(--gray);
+  --secondary: var(--black)
+}
+
 .header {
   background-color: var(--primary);
 }
@@ -34,18 +40,16 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 6rem;
-  margin-right: 6rem;
   padding: 0px;
 }
 .card {
   background-color: whitesmoke;
   border: 0.3rem solid black;
   border-radius: 30px;
-  width: 15vw;
-  height: 48vh;
+  width: 25vw;
+  height: 25vh;
   padding: 0%;
-  margin: 3rem;
+  margin: 1rem;
   align-items: center;
   transition: all 0.3s
 }
@@ -54,6 +58,13 @@ body {
   scale: 1.5;
   position: absolute;
   left: 48vw;
+  top: 90vh;
+}
+
+.switch1 {
+  scale: 1.5;
+  position: absolute;
+  left: 24vw;
   top: 90vh;
 }
 
