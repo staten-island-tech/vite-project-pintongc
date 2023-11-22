@@ -2,6 +2,8 @@ import '../css/style.css';
 
 const DOMSelectors = {
     gallery: document.querySelector(".gallery"),
+    cards: document.querySelector(".card-gallery"),
+    cardtitle: document.querySelector(".card-title")
   };
 
 document.querySelector(".switch").addEventListener("click", function(){
@@ -26,9 +28,10 @@ document.querySelector(".switch1").addEventListener("click", function(){
 
 
 document.querySelector(".switch2").addEventListener("click", function(){
-    DOMSelectors.gallery.insertAdjacentHTML(
+    DOMSelectors.cards.insertAdjacentHTML(
         "afterbegin",
-        `<div class="card">
+        `<div class="card-gallery">
+        <div class="card">
         <div class="card-title">ASJKD</div>
         <div class="card-image"><img src="" alt=""></div>
         <div class="card-desciption">asjdkhsajdhsahji
@@ -45,5 +48,32 @@ document.querySelector(".switch2").addEventListener("click", function(){
         <div class="card-image"><img src="" alt=""></div>
         <div class="card-desciption">asjdkhsajdhsahji
         </div>
+      </div>
+      </div>`
+)});
+
+document.querySelector(".switch3").addEventListener("click", function(event){
+    event.currentTarget.parentNode.remove();
+    DOMSelectors.cards.insertAdjacentHTML(
+        "afterbegin",
+        `<div class="card-gallery">
+        <div class="card">
+        <div class="card-title">ASJKD</div>
+        <div class="card-image"><img src="" alt=""></div>
+        <div class="card-desciption">asjdkhsajdhsahji
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">ASJKD</div>
+        <div class="card-image"><img src="" alt=""></div>
+        <div class="card-desciption">asjdkhsajdhsahji
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">ASJKD</div>
+        <div class="card-image"><img src="" alt=""></div>
+        <div class="card-desciption">asjdkhsajdhsahji
+        </div>
+      </div>
       </div>`
 )});
