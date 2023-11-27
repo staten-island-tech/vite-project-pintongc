@@ -33,7 +33,7 @@ document.querySelector(".switch2").addEventListener("click", function(){
         `<div class="card-gallery">
         <div class="card">
         <div class="card-title">ASJKD</div>
-        <div class="card-image"><img src="" alt=""></div>
+        <div class="card-image"><img src="https://images.unsplash.com/photo-1682687220499-d9c06b872eee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
         <div class="card-desciption">asjdkhsajdhsahji
         </div>
       </div>
