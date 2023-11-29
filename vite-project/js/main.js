@@ -3,7 +3,7 @@ import { foods } from './foods';
 import { DOMSelectors } from './dom';
 
 const filteredFoods = {
-  vegan: foods.filter((food) => food.type = ("vegan")),
+  vegan: foods.filter((food) => food.type.includes("vegan")),
   seafood: foods.filter((food) => food.type = ("seafood")),
   entree: foods.filter((food) => food.type = ("entree")),
   appeetizers: foods.filter((food) => food.type = ("appetizer"))
@@ -44,10 +44,17 @@ const createAllCards = () => {
   foods.forEach((food) => createCard(food));
 };
 
-DOMSelectors.veganButton.addEventListener("click", function (event) {
-  DOMSelectors.gallery.innerHTML = '';
-  const filteredCards = createCard(vegan);
+DOMSelectors.veganButton.addEventListener("click", function () {
+  DOMSelectors.cards.innerHTML = '';
+  const filteredCards = createCard(filteredFoods.vegan);
   createAllCards(filteredCards);
 })
 
+let buttons = document.querySelectorAll(".food-btn")
+buttons.forEach((btn) => btn.addEventListener("click",
+function(){
+
+}));
+
 createAllCards();
+
