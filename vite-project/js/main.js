@@ -44,4 +44,10 @@ const createAllCards = () => {
   foods.forEach((food) => createCard(food));
 };
 
+DOMSelectors.veganButton.addEventListener("click", function (event) {
+  DOMSelectors.gallery.innerHTML = '';
+  const filteredCards = createCard(vegan);
+  createAllCards(filteredCards);
+})
+
 createAllCards();
