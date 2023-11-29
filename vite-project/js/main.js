@@ -1,79 +1,47 @@
 import '../css/style.css';
+import { foods } from './foods';
+import { DOMSelectors } from './dom';
 
-const DOMSelectors = {
-    gallery: document.querySelector(".gallery"),
-    cards: document.querySelector(".card-gallery"),
-    cardtitle: document.querySelector(".card-title")
-  };
+const filteredFoods = {
+  vegan: foods.filter((food) => food.type = ("vegan")),
+  seafood: foods.filter((food) => food.type = ("seafood")),
+  entree: foods.filter((food) => food.type = ("entree")),
+  appeetizers: foods.filter((food) => food.type = ("appetizer"))
+};
 
-document.querySelector(".switch").addEventListener("click", function(){
-    if(document.body.classList.contains("dark", "warm")){
-        document.body.classList.add("light");
-        document.body.classList.remove("dark", "warm");
-    } else {
-        document.body.classList.add("dark")
-        document.body.classList.remove("light");
-    }
+const createCard = (food) => {
+  DOMSelectors.cards.insertAdjacentHTML(
+    'afterbegin',
+    `<div class="card">
+        <div class="card-title">${food.name}</div>
+        <div class="card-image"><img src="${food.image}" alt="${food.name}"></div>
+        <div class="card-desciption">${food.description}</div>
+      </div>`
+  );
+};
+
+document.querySelector('.switch').addEventListener('click', function() {
+  if (document.body.classList.contains('dark', 'warm')) {
+    document.body.classList.add('light');
+    document.body.classList.remove('dark', 'warm');
+  } else {
+    document.body.classList.add('dark');
+    document.body.classList.remove('light');
+  }
 });
 
-document.querySelector(".switch1").addEventListener("click", function(){
-    if(document.body.classList.contains("dark", "light")){
-        document.body.classList.add("warm");
-        document.body.classList.remove("dark", "light");
-    } else {
-        document.body.classList.add("dark")
-        document.body.classList.remove("warm");
-    }
+document.querySelector('.switch1').addEventListener('click', function() {
+  if (document.body.classList.contains('dark', 'light')) {
+    document.body.classList.add('warm');
+    document.body.classList.remove('dark', 'light');
+  } else {
+    document.body.classList.add('dark');
+    document.body.classList.remove('warm');
+  }
 });
 
+const createAllCards = () => {
+  foods.forEach((food) => createCard(food));
+};
 
-document.querySelector(".switch2").addEventListener("click", function(){
-    DOMSelectors.cards.insertAdjacentHTML(
-        "afterbegin",
-        `<div class="card-gallery">
-        <div class="card">
-        <div class="card-title">ASJKD</div>
-        <div class="card-image"><img src="https://images.unsplash.com/photo-1682687220499-d9c06b872eee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
-        <div class="card-desciption">asjdkhsajdhsahji
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-title">ASJKD</div>
-        <div class="card-image"><img src="" alt=""></div>
-        <div class="card-desciption">asjdkhsajdhsahji
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-title">ASJKD</div>
-        <div class="card-image"><img src="" alt=""></div>
-        <div class="card-desciption">asjdkhsajdhsahji
-        </div>
-      </div>
-      </div>`
-)});
-
-document.querySelector(".switch3").addEventListener("click", function(event){
-    event.currentTarget.parentNode.remove();
-    DOMSelectors.cards.insertAdjacentHTML(
-        "afterbegin",
-        `<div class="card-gallery">
-        <div class="card">
-        <div class="card-title">ASJKD</div>
-        <div class="card-image"><img src="" alt=""></div>
-        <div class="card-desciption">asjdkhsajdhsahji
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-title">ASJKD</div>
-        <div class="card-image"><img src="" alt=""></div>
-        <div class="card-desciption">asjdkhsajdhsahji
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-title">ASJKD</div>
-        <div class="card-image"><img src="" alt=""></div>
-        <div class="card-desciption">asjdkhsajdhsahji
-        </div>
-      </div>
-      </div>`
-)});
+createAllCards();

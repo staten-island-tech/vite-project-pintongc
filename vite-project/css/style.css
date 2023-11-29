@@ -70,28 +70,28 @@ body {
   top: 90vh;
 }
 
-.switch2 {
+#switch2 {
   scale: 1.5;
   position: absolute;
   left: 95vw;
   top: 10vh;
 }
 
-.switch3 {
+#switch3 {
   scale: 1.5;
   position: absolute;
   left: 95vw;
   top: 14vh;
 }
 
-.switch4 {
+#switch4 {
   scale: 1.5;
   position: absolute;
   left: 95vw;
   top: 18vh;
 }
 
-.switch5 {
+#switch5 {
   scale: 1.5;
   position: absolute;
   left: 94vw;
