@@ -1,6 +1,6 @@
 import '../css/style.css';
-import { foods } from './foods';
 import { DOMSelectors } from './dom';
+import {foods} from './foods.js';
 
 const filteredFoods = {
   vegan: foods.filter((food) => food.type.includes("vegan")),

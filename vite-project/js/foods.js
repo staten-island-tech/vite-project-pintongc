@@ -59,3 +59,5 @@ const foods = [
   },
 ];
 export {foods};
+
+foods.filter((food) => food.type.includes("vegan")).forEach((food) => console.log(food.name));
