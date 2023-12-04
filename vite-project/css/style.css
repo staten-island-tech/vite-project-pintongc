@@ -67,8 +67,8 @@ body {
   align-items: center;
   height: 9rem; 
   background-image: url("/public/Elmer's_logo.svg.png");
-  background-size: 35rem; /* Adjusts the background image to cover the entire header */
-  background-position: center; /* Centers the background image */
+  background-size: 35rem;
+  background-position: center;
 }
 
 .card-title {
