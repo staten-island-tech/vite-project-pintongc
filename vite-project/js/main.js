@@ -59,3 +59,33 @@ document.querySelector(".switch").addEventListener("click", function () {
     document.body.classList.remove("warm");
   }
 });
+
+// DOMSelectors.veganButton.addEventListener("click", function () {
+//   DOMSelectors.cards.innerHTML = '';
+//   const filteredCards = createCard(filteredFoods.vegan);
+//   createAllCards(filteredCards);
+// })
+
+// DOMSelectors.dessertButton.addEventListener("click", function () {
+//   DOMSelectors.cards.innerHTML = '';
+//   const filteredCards = createCard(filteredFoods.dessert);
+//   createAllCards(filteredCards);
+// })
+
+// DOMSelectors.appetizerButton.addEventListener("click", function () {
+//   DOMSelectors.cards.innerHTML = '';
+//   const filteredCards = createCard(filteredFoods.appetizer);
+//   createAllCards(filteredCards);
+// })
+
+// DOMSelectors.entreeButton.addEventListener("click", function () {
+//   DOMSelectors.cards.innerHTML = '';
+//   const filteredCards = createCard(filteredFoods.entree);
+//   createAllCards(filteredCards);
+// })
+
+// DOMSelectors.seafoodButton.addEventListener("click", function () {
+//   DOMSelectors.cards.innerHTML = '';
+//   const filteredCards = createCard(filteredFoods.seafood);
+//   createAllCards(filteredCards);
+// })
