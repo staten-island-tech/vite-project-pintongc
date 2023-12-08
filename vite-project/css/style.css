@@ -56,6 +56,7 @@ body {
   align-items: center; 
   position: relative;
   box-shadow: 0.5rem 0.3rem 0.2rem rgb(21, 22, 22);
+  overflow: hidden;
 }
 
 .header {
